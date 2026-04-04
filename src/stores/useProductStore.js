@@ -92,8 +92,36 @@ export const useProductStore = create((set) => ({
 	products: [],
 	filteredProducts: [],
 	loading: false,
-
-	setProducts: (products) => set({ products }),
+	error: null,
+	// Set all products
+  setProducts: (products) => set({ products }),
+  
+  // Set loading state
+  setLoading: (loading) => set({ loading }),
+  
+  // Set error state
+  setError: (error) => set({ error }),
+  
+  // Add a single product
+  addProduct: (product) => set((state) => ({ 
+    products: [...state.products, product] 
+  })),
+  
+  // Remove a product
+  removeProduct: (productId) => set((state) => ({ 
+    products: state.products.filter(p => p.id !== productId) 
+  })),
+  
+  // Update a product
+  updateProduct: (productId, updatedProduct) => set((state) => ({
+    products: state.products.map(p => 
+      p.id === productId ? { ...p, ...updatedProduct } : p
+    )
+  })),
+  
+  // Reset store
+  resetStore: () => set({ products: [], loading: false, error: null }),
+	// setProducts: (products) => set({ products }),
 	createProduct: async (productData) => {
 		set({ loading: true });
 		try {

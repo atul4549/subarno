@@ -5,6 +5,10 @@ import {Category} from './pages/Category'
 import {Checkout} from './pages/Checkout'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Toaster } from 'react-hot-toast'
+import { Navigation } from './component/Navigation'
+import { Contact } from './pages/Contact'
+import { ProductListing } from './pages/productListing'
+
 function App() {
 
   return (
@@ -24,10 +28,14 @@ function App() {
           zIndex: 50, 
           // paddingTop: "80px" 
         }}>
+          <Navigation/>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/category/:category' element={<Category />} />
-            <Route path="/Checkout" element={<Checkout />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product" element={<ProductListing />} />
+
           </Routes>
         </div>
         <Toaster />

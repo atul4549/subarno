@@ -1,42 +1,42 @@
-import { useState } from "react";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
+// import toast from "react-hot-toast";
+// import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
     // console.log(product.category)
-    const navigate = useNavigate();
-	const [quantity, setQuantity] = useState(1);
+    // const navigate = useNavigate();
+	// const [quantity, setQuantity] = useState(1);
 	
-	const handleQuantityChange = (e) => {
-		const value = parseInt(e.target.value);
-		if (value >= 1) {
-			setQuantity(value);
-		}
-	};
+	// const handleQuantityChange = (e) => {
+	// 	const value = parseInt(e.target.value);
+	// 	if (value >= 1) {
+	// 		setQuantity(value);
+	// 	}
+	// };
 
-	const incrementQuantity = () => {
-		setQuantity(prev => prev + 1);
-	};
+	// const incrementQuantity = () => {
+	// 	setQuantity(prev => prev + 1);
+	// };
 
-	const decrementQuantity = () => {
-		if (quantity > 1) {
-			setQuantity(prev => prev - 1);
-		}
-	};
+	// const decrementQuantity = () => {
+	// 	if (quantity > 1) {
+	// 		setQuantity(prev => prev - 1);
+	// 	}
+	// };
 
-	const handleBuyNow = async () => {
-        try {
-			navigate("/checkout", {
-				state: {
-					quantity: quantity,
-					product: product
-				}
-			});
-		} catch (error) {
-			toast.error("Failed to proceed to checkout. Please try again.");
-			console.error("Buy now error:", error);
-		}
-	};
+	// const handleBuyNow = async () => {
+    //     try {
+	// 		navigate("/checkout", {
+	// 			state: {
+	// 				quantity: quantity,
+	// 				product: product
+	// 			}
+	// 		});
+	// 	} catch (error) {
+	// 		toast.error("Failed to proceed to checkout. Please try again.");
+	// 		console.error("Buy now error:", error);
+	// 	}
+	// };
 
 	return (
 		<div style={styles.card}>
@@ -54,19 +54,19 @@ const ProductCard = ({ product }) => {
 					{product.name}
 				</h5>
                 
-				<div style={styles.priceContainer}>
-						{/* <span style={styles.price}>	
+				{/* <div style={styles.priceContainer}>
+						<span style={styles.price}>	
 							 {product.category}
-						</span> */}
+						</span>
 					<p>
 						<span style={styles.price}>	
 							Rs {product.price}
 						</span>
 					</p>
-				</div>
+				</div> */}
 				
 				{/* Quantity Selector */}
-				<div style={styles.quantityWrapper}>
+				{/* <div style={styles.quantityWrapper}>
 					<button 
 						style={styles.quantityButton}
 						onClick={decrementQuantity}
@@ -90,8 +90,8 @@ const ProductCard = ({ product }) => {
 					>
 						+
 					</button>
-				</div>
-				
+				</div> */}
+{/* 				
 				<button
 					style={styles.button}
 					onClick={handleBuyNow}
@@ -106,7 +106,7 @@ const ProductCard = ({ product }) => {
 					}}
 				>
 					Buy Now
-				</button>
+				</button> */}
 			</div>
 		</div>
 	);
