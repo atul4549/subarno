@@ -143,10 +143,10 @@ export const Checkout = () => {
             const order = await createOrder();
             
             // Update order status for COD
-            await axiosInstance.patch(`/orders/${order._id}/status`, {
-                status: 'confirmed',
-                paymentStatus: 'pending'
-            });
+            // await axiosInstance.patch(`/orders/${order._id}/status`, {
+            //     status: 'confirmed',
+            //     paymentStatus: 'pending'
+            // });
             
             toast.success("Order placed successfully!");
             
