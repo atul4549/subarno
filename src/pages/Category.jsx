@@ -5,7 +5,8 @@ import { motion } from "framer-motion";
 import ProductCard from "../component/ProductCard";
 
 export const Category = () => {
-  const { fetchProductsByCategory, products } = useProductStore();
+  const { fetchProductsByCategory, filteredProducts } = useProductStore();
+  const products = filteredProducts
   const { category } = useParams();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

@@ -7,7 +7,7 @@ import FeaturedProducts from "../component/FeaturedProducts";
 
 const CATEGORIES = [
   {
-    href: "/floor_tiles",
+    href: "/floor_tile",
     name: "Floor Tiles",
     imageUrl: "https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&w=1600",
     types: ["24x24 Matt", "24x24 GVT", "24x24 Double Charge", "24x48"]

@@ -3,6 +3,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
+    // console.log(product.category)
     const navigate = useNavigate();
 	const [quantity, setQuantity] = useState(1);
 	
@@ -52,7 +53,11 @@ const ProductCard = ({ product }) => {
 				<h5 style={styles.title}>
 					{product.name}
 				</h5>
+                
 				<div style={styles.priceContainer}>
+						{/* <span style={styles.price}>	
+							 {product.category}
+						</span> */}
 					<p>
 						<span style={styles.price}>	
 							Rs {product.price}
