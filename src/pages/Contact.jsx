@@ -55,7 +55,7 @@ export const Contact = () => {
   const theme = themes[currentTheme];
 
   const contactInfo = {
-    name: 'Subarno',
+    name: 'Subarno Sharma',
     // role: 'Shop Owner & Curator',
     role: 'Shop Owner',
     // email: 'atul4545@zohomail.in',

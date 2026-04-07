@@ -120,8 +120,7 @@ export const Navigation = () => {
 			<div style={styles.container}>
 				<div style={styles.flexContainer}>
 					<Link to='/' style={styles.logo}>
-						{/* E-Commerce */}
-						Subarno
+						Shri Shiv Shakti
 					</Link>
 
 					<nav style={styles.nav}>
