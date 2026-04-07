@@ -27,7 +27,8 @@ const CATEGORIES = [
   {
     href: "/kitchen_tiles",
     name: "Kitchen Tiles",
-    imageUrl: "https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    imageUrl: "https://qarpentri.com/cdn/shop/files/forest-green-white-modern-l-shaped-kitchen-microwave-unit.jpg?v=1720978833",
+    // imageUrl: "https://images.pexels.com/photos/2082087/pexels-photo-2082087.jpeg?auto=compress&cs=tinysrgb&w=1600",
     types: ["Backsplash", "Floor Tiles", "Wall Tiles"]
   }
 ];
